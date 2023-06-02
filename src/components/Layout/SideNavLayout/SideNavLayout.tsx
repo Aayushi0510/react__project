@@ -12,6 +12,7 @@ import Header from "../../UI/Header/Header";
 type props = {
   children: ReactNode;
 };
+
 const SideNavLayout = ({ children }: props) => {
   const dispatch = useDispatch();
   const SideNavLayoutState = useSelector(
@@ -26,7 +27,7 @@ const SideNavLayout = ({ children }: props) => {
   const currentPath = `/${location.pathname?.split("/")[1]}`;
 
   return (
-    <div className="h-screen w-screen">
+    <div className=" flex h-screen w-screen">
       <div
         className={`border-r border-slate-300 h-full transition-all duration-500 ease-in-out ${
           isCollapsed ? "min-w-[50px] w-[50px]" : "min-w-[250px] w-[250px]"
